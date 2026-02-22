@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kieran Consulting LLC</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Base Styles */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background-color: #4A90E2;
+      color: #fff;
+      padding: 80px 20px 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    nav ul li a {
+      font-weight: 600;
+      color: #4A90E2;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #1E88E5;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    section:nth-of-type(even) {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 40px 20px;
+    }
+
+    section h2 {
+      color: #4A90E2;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+
+    .feature-card {
+      background-color: #f0f4f8;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .placeholder-video {
+      background-color: #ddd;
+      color: #666;
+      text-align: center;
+      padding: 60px 20px;
+      border-radius: 8px;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      background-color: #4A90E2;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .contact-btn:hover {
+      background-color: #1E88E5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      margin-top: 40px;
+      border-top: 1px solid #ccc;
+    }
+
+    /* Dark Mode */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212;
+        color: #e0e0e0;
+      }
+
+      header {
+        background-color: #1E88E5;
+      }
+
+      nav {
+        background: rgba(20,20,20,0.95);
+        box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+      }
+
+      nav ul li a {
+        color: #90CAF9;
+      }
+
+      nav ul li a:hover {
+        color: #64B5F6;
+      }
+
+      section:nth-of-type(even) {
+        background-color: #1e1e1e;
+        box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+      }
+
+      .feature-card {
+        background-color: #292929;
+        box-shadow: 0 1px 5px rgba(255,255,255,0.05);
+      }
+
+      .placeholder-video {
+        background-color: #333;
+        color: #aaa;
+      }
+
+      .contact-btn {
+        background-color: #64B5F6;
+        color: #121212;
+      }
+
+      .contact-btn:hover {
+        background-color: #1E88E5;
+        color: #fff;
+      }
+
+      footer {
+        background-color: #1a1a1a;
+        border-top: 1px solid #333;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kieran Consulting LLC</h1>
+    <p>Fixing messy workflows so you can focus on what matters</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Hi, I’m Kieran. I help organizations streamline processes, automate repetitive tasks, and reduce friction in daily workflows. My goal is to make your systems work for you so you can focus on solving your big problems.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="feature-card">
+      <p><strong>Email Automation for Google Workspace:</strong> I set up automated forms and email workflows that save time and reduce errors. Perfect for billing approvals, document submissions, and other repetitive processes.</p>
+    </div>
+  </section>
+
+  <section id="demo">
+    <h2>Demo Video</h2>
+    <div class="placeholder-video">
+      Your Loom video will go here! Paste the embed code when ready.
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Reach me at <a href="mailto:kieranconsultingllc@gmail.com">kieranconsultingllc@gmail.com</a></p>
+    <a href="mailto:kieranconsultingllc@gmail.com" class="contact-btn">Contact Me</a>
+  </section>
+
+  <footer>
+    &copy; 2026 Kieran Consulting LLC
+  </footer>
+
+</body>
+</html>
