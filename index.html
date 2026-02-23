@@ -4,212 +4,246 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kieran Consulting LLC</title>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+      color: #1a1a1a;
       line-height: 1.6;
-      color: #333;
-      background-color: #f8f9fa;
-      scroll-behavior: smooth;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    header {
-      background-color: #4A90E2;
-      color: #fff;
-      padding: 80px 20px 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.8em;
-      font-weight: 700;
-    }
-
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-      font-weight: 500;
-    }
+    a { text-decoration: none; color: inherit; }
 
     nav {
       position: sticky;
       top: 0;
-      background: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(8px);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
       z-index: 1000;
     }
 
+    nav .logo { font-weight: 700; }
+
     nav ul {
       list-style: none;
-      margin: 0;
-      padding: 10px 20px;
       display: flex;
-      justify-content: center;
-      gap: 40px;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
     }
 
     nav ul li a {
       font-weight: 600;
-      color: #4A90E2;
-      transition: color 0.3s;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
     }
 
-    nav ul li a:hover {
-      color: #1E88E5;
+    nav ul li a:hover { color: #4A90E2; }
+
+    header {
+      padding: 120px 20px 100px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      color: #555;
+    }
+
+    .primary-btn {
+      display: inline-block;
+      background: #4A90E2;
+      color: white;
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(74,144,226,0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(74,144,226,0.3);
     }
 
     section {
-      max-width: 900px;
-      margin: 60px auto;
+      max-width: 1000px;
+      margin: 100px auto;
       padding: 0 20px;
     }
 
-    section:nth-of-type(even) {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      padding: 40px 20px;
-    }
-
     section h2 {
-      color: #4A90E2;
-      margin-bottom: 20px;
-      font-size: 1.8em;
-      font-weight: 600;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
     }
 
-    .feature-card {
-      background-color: #f0f4f8;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-      transition: transform 0.2s, box-shadow 0.2s;
+    .center-text {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #555;
     }
 
-    .feature-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
     }
 
-    .contact-btn {
-      display: inline-block;
-      background-color: #4A90E2;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background-color 0.3s;
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .contact-btn:hover {
-      background-color: #1E88E5;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    }
+
+    .card h3 { margin-top: 0; }
+
+    .results-box {
+      background: #f0f4f8;
+      padding: 40px;
+      border-radius: 14px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 500;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #eee;
-      margin-top: 40px;
-      border-top: 1px solid #ccc;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #777;
     }
 
     @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #121212;
-        color: #e0e0e0;
-      }
-
-      header {
-        background-color: #1E88E5;
-      }
-
-      nav {
-        background: rgba(20,20,20,0.95);
-        box-shadow: 0 2px 5px rgba(255,255,255,0.05);
-      }
-
-      nav ul li a {
-        color: #90CAF9;
-      }
-
-      nav ul li a:hover {
-        color: #64B5F6;
-      }
-
-      section:nth-of-type(even) {
-        background-color: #1e1e1e;
-        box-shadow: 0 2px 10px rgba(255,255,255,0.05);
-      }
-
-      .feature-card {
-        background-color: #292929;
-        box-shadow: 0 1px 5px rgba(255,255,255,0.05);
-      }
-
-      .contact-btn {
-        background-color: #64B5F6;
-        color: #121212;
-      }
-
-      .contact-btn:hover {
-        background-color: #1E88E5;
-        color: #fff;
-      }
-
-      footer {
-        background-color: #1a1a1a;
-        border-top: 1px solid #333;
-      }
+      body { background: #0f1115; color: #e5e5e5; }
+      nav { background: rgba(20,20,20,0.9); }
+      header p, .center-text { color: #aaa; }
+      .card { background: #1a1d24; }
+      .results-box { background: #1e222a; }
+      footer { color: #888; }
     }
+
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Kieran Consulting LLC</h1>
-    <p>Fixing messy workflows so you can focus on what matters</p>
-  </header>
+<nav>
+  <div class="logo">Kieran Consulting LLC</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<header>
+  <h1>Eliminate manual work. Simplify operations. Move faster.</h1>
+  <p>I help small teams and growing organizations streamline messy workflows inside Google Workspace and internal systems — without expensive software or bloated tools.</p>
+  <a href="#contact" class="primary-btn">Start a Conversation</a>
+</header>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>Hi, I’m Kieran. I help organizations streamline processes, automate repetitive tasks, and reduce friction in daily workflows. My goal is to make your systems work for you so you can focus on solving your big problems.</p>
-  </section>
+<section id="about">
+  <h2>Who I Help</h2>
+  <p class="center-text">
+    If your team is stuck manually approving forms, chasing emails, copying data between spreadsheets, or repeating the same tasks every week — I build lightweight automation systems that remove that friction.
+  </p>
+</section>
 
-  <section id="services">
-    <h2>Services</h2>
-    <div class="feature-card">
-      <p><strong>Email Automation for Google Workspace:</strong> I set up automated forms and email workflows that save time and reduce errors. Perfect for billing approvals, document submissions, and other repetitive processes.</p>
+<section id="services">
+  <h2>Services</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Workflow Automation</h3>
+      <p>Automate approvals, document submissions, notifications, and recurring processes inside Google Workspace.</p>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Reach me at <a href="mailto:kieranconsultingllc@gmail.com">kieranconsultingllc@gmail.com</a></p>
-    <a href="mailto:kieranconsultingllc@gmail.com" class="contact-btn">Contact Me</a>
-  </section>
+    <div class="card">
+      <h3>Process Optimization</h3>
+      <p>Identify bottlenecks and redesign internal workflows to reduce errors and manual effort.</p>
+    </div>
 
-  <footer>
-    &copy; 2026 Kieran Consulting LLC
-  </footer>
+    <div class="card">
+      <h3>Custom Internal Tools</h3>
+      <p>Build simple tools using Forms, Sheets, Apps Script, and integrations — tailored to how your team actually works.</p>
+    </div>
+  </div>
+
+</section>
+
+<section id="results">
+  <h2>Example Outcome</h2>
+
+  <div class="results-box">
+    Reduced manual billing approval time by over 70% by replacing email-based approvals with an automated Google Form + notification workflow system.
+  </div>
+
+</section>
+
+<section>
+  <h2>How It Works</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>1. Identify Friction</h3>
+      <p>We pinpoint repetitive tasks and approval bottlenecks.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. Build Lightweight Automation</h3>
+      <p>I implement a clean, simple solution inside your existing tools.</p>
+    </div>
+
+    <div class="card">
+      <h3>3. Reduce Ongoing Manual Work</h3>
+      <p>Your team saves time every week without changing platforms.</p>
+    </div>
+  </div>
+
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="center-text">Ready to simplify your operations?</p>
+  <div style="text-align:center; margin-top:30px;">
+    <a href="mailto:kieranconsultingllc@gmail.com" class="primary-btn">
+      kieranconsultingllc@gmail.com
+    </a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Kieran Consulting LLC
+</footer>
 
 </body>
 </html>
